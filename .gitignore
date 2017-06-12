@@ -1,0 +1,13 @@
+# project-specific
+/ideas
+*hidden*
+
+# dependencies
+node_modules
+
+# misc
+.DS_Store
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
