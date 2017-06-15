@@ -36,7 +36,7 @@ db.get('data').push({id: 1, title: 'test'}).write()
 ```javascript
 var lowdb = require('lowdb')
 var db = lowdb('chatbot.json')
-db.defaults({messages: [], users: {}}).write()
+db.defaults({messages: [], users: []}).write()
 
 var Telegram = require('node-telegram-bot-api')
 var token = 'HERE_IS_YOUR_TOKEN'
@@ -44,11 +44,11 @@ var bot = new Telegram(token, {polling: true})
 bot.on('message', function(message) {
   console.log(message)
   // записываем в бд все сообщения без исключения
-  db.get('messages').push({message}).write()
+  db.get('messages').push(message).write()
   // проверяем, если в базе уже есть пользователи с message.from.id
   if (!db.get('users').find({id: message.from.id}).value()) {
     // если такого нет, записываем
-    db.get('users').push({message.from}).write()
+    db.get('users').push(message.from).write()
   }
 })
 ```
