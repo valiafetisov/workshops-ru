@@ -1,11 +1,13 @@
 # Графический пользовательский интерфейс
 
 Примеры:
+ - Net Art, например проект Алексея Шульгина [form art](http://www.c3.hu/collection/form/)
  - [Rafaël Rozendaal](http://www.newrafael.com/)
     - [fallingfalling](http://www.fallingfalling.com/)
     - [pleaselike](http://www.pleaselike.com/)
  - [pointerpointer.com](http://pointerpointer.com/), [description](https://studiomoniker.com/projects/pointer-pointer)
     - [donottouch.org](http://donottouch.org/)
+ - Бруталистское движение в веб-дизайне [brutalistwebsites.com](http://brutalistwebsites.com/)
 
 1. Статичная html-страница
 2. Страница, которая посылает запросы на сервер, сервер
