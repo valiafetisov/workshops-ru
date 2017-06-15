@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>api call</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style type="text/css">
+      html, body {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background-color: black;
+      }
+      .counterWrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+      .button {
+        background: red;
+        padding: 3px;
+        cursor: pointer;
+        margin: 5px;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="counterWrapper">
+      <div class="counter">counter</div>
+      <div class="button" onclick="apiCall('/counter/increment')">click me</div>
+    </div>
+    <script type="text/javascript">
+      function apiCall (address) {
+        $.getJSON(address, function(data) {
+          $('.counter').text(data.counter)
+        }).fail(function() {
+          $('.counter').text('error')
+        })
+      }
+      apiCall('/counter/get')
+    </script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- устанавливаем кодировку страницы -->
+    <meta charset="utf-8">
+
+    <!-- устанавливаем заголовок страницы -->
+    <title>say it</title>
+
+    <!-- устанавливаем ширину страницы для небольших экранов -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- подключаем библиотеку jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- подключаем применяем стили -->
+    <style type="text/css">
+      html, body {
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+        font-size: 50px;
+      }
+      .toSayWrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .toSayBlock {
+        max-width: 600px;
+        padding: 100px;
+        background-color: red;
+      }
+      .toSayBlock input {
+        border: none;
+        box-sizing: border-box;
+        font-size: inherit;
+        font-family: inherit;
+        width: 100%;
+        padding: 2px;
+      }
+      .toSayBlock input:focus {
+        outline: none;
+      }
+      .toSayBlock .toSayButton {
+        cursor: pointer;
+        background-color: black;
+        user-select: none;
+        color: white;
+        text-align: center;
+      }
+      .toSayBlock .toSayButton:hover {
+        background-color: yellow;
+        color: black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="toSayWrapper">
+      <div class="toSayBlock">
+
+        <!-- инпут – элемент, в который можно вводить текст -->
+        <input placeholder="Your text here" autofocus>
+
+        <!-- в параметр onclick передаем вызов функции say -->
+        <div class="toSayButton" onclick="say()">Say it</div>
+
+        <!-- ниже элементов пишем код с функцией say -->
+        <script type="text/javascript">
+          function say () {
+            // получаем введенный текст
+            var text = $('input').val()
+
+            // отправляем гет-запрос к серверу с текстом в переменной data
+            $.get('/say', {data: text}, function (response) {
+              // в функции, которая выполняется когда получен ответ от сервера
+              // логируем ответ от сервера
+              console.log(response)
+
+              // заменяем текст инпута на пустую строку и ставим в него курсор
+              $('input').val('').focus()
+            })
+          }
+
+          // добавляем вызов функции say при нажатии enter
+          $('input').on('keypress', function (e) {
+            if (e.key === 'Enter') say()
+          })
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

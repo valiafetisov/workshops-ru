@@ -1,0 +1,13 @@
+{
+  "name": "example-say-input",
+  "dependencies": {
+    "express": "^4.15.3",
+    "say": "^0.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "start": "nodemon app.js"
+  }
+}
