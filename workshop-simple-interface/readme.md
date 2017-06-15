@@ -1,11 +1,15 @@
 # Графический пользовательский интерфейс
 
 Примеры:
- - Net Art, например проект Алексея Шульгина [form art](http://www.c3.hu/collection/form/)
- - [Rafaël Rozendaal](http://www.newrafael.com/)
+ - net.art
+    - [jodi.org](http://jodi.org)
+    - [Алексей Шульгин](http://easylife.org), в частности [form art](http://www.c3.hu/collection/form/)
+    - [Оля Лялина](http://art.teleportacia.org/#CenterOfTheUniverse)
+ - [Rafaël Rozendaal](http://www.newrafael.com/):
     - [fallingfalling](http://www.fallingfalling.com/)
     - [pleaselike](http://www.pleaselike.com/)
- - [pointerpointer.com](http://pointerpointer.com/), [description](https://studiomoniker.com/projects/pointer-pointer)
+ - Экспериментальные дизайн-студии. например [studiomoniker](https://studiomoniker.com)
+    - [pointerpointer.com](http://pointerpointer.com/), [описание](https://studiomoniker.com/projects/pointer-pointer)
     - [donottouch.org](http://donottouch.org/)
  - Бруталистское движение в веб-дизайне [brutalistwebsites.com](http://brutalistwebsites.com/)
 
@@ -91,4 +95,4 @@ app.get('/', function (request, response) {
 })
 ```
 
-Пример приложения, которое произносит (на сервере) введенный пользователем текст (на странице): [example-say-input](example-say-input). Такое приложение можно поместить в интернет с помощью несложных действий, а именно [_обратного туннеля_](../lesson-06#3-Обратный-туннель).
+Пример приложения, которое произносит (на сервере) введенный пользователем текст на странице: [example-say-input](example-say-input). Такое приложение можно поместить в интернет с помощью несложных действий, а именно [_обратного туннеля_](../workshop-deploy#3-Обратный-туннель).
