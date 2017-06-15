@@ -1,6 +1,6 @@
 # Графический пользовательский интерфейс
 
-Примеры:
+__Примеры__:
  - net.art
     - [jodi.org](http://jodi.org)
     - [Алексей Шульгин](http://easylife.org), в частности [form art](http://www.c3.hu/collection/form/)
@@ -12,9 +12,6 @@
     - [pointerpointer.com](http://pointerpointer.com/), [описание](https://studiomoniker.com/projects/pointer-pointer)
     - [donottouch.org](http://donottouch.org/)
  - Бруталистское движение в веб-дизайне [brutalistwebsites.com](http://brutalistwebsites.com/)
-
-1. Статичная html-страница
-2. Страница, которая посылает запросы на сервер, сервер
 
 
 ### 1. Первый статичный файл
